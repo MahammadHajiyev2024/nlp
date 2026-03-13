@@ -34,6 +34,23 @@ The goal is just to confirm you can run projects on your machine.
 Once you get the first project running successfully,
 the rest of the course is much easier.
 
+## 🛠️ Record of Modification
+
+### What I Changed
+- **Renamed Project Files:** Duplicated the example pipeline and renamed core files to `_hajiyev` to establish personal ownership of the code.
+- **Dynamic URL Input:** Modified `Section 2` to support a comparative analysis between traditional finance (**Monetary Policy**) and digital finance (**Cryptocurrency**) datasets.
+- **Custom NLP Filtering Logic:** Implemented a specialized `STOP_WORDS` list in `Section 5` to filter out generic financial "noise" (e.g., *money, bank, central*) that otherwise clutters the frequency analysis.
+- **Automated Data Export:** Added a dynamic file-saving mechanism using **Polars** that generates CSV reports in the `data/` folder named automatically based on the source URL.
+
+### Why I Made the Change
+As an aspiring **Data Engineer**, I wanted to move beyond simple text scraping and create a tool that reveals the distinct "vocabulary signatures" of different financial philosophies. By filtering out high-frequency but low-insight words, I enabled the script to highlight specific technical concepts like *Inflation* and *Interest* for traditional policy, vs. *Blockchain* and *Decentralized* for crypto.
+
+### What I Observed
+- **Data Density:** The Monetary Policy dataset was significantly denser (400k+ characters) compared to the Cryptocurrency set, reflecting the more established academic nature of the topic.
+- **Thematic Clarity:** The custom filter successfully shifted the Word Cloud focus. In the "Monetary" run, **Rate** and **Inflation** became the dominant visual nodes, whereas **Bitcoin** and **Nodes** dominated the "Crypto" run.
+- **Pipeline Efficiency:** The use of `pathlib` for the `data/` folder creation ensured the script was cross-platform compatible and eliminated manual folder setup.
+
+
 ## First: Follow These Instructions
 
 Follow the [step-by-step workflow guide](https://denisecase.github.io/pro-analytics-02/workflow-b-apply-example-project/) to complete:
